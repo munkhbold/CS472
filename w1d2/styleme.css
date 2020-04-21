@@ -1,0 +1,21 @@
+ body {
+     background-color: rgb(118, 126, 138);
+     color: white;
+ }
+
+ h1, h3 {
+     color: blue;
+     font-family: 'Courier New', Courier, monospace;
+ }
+
+ .mark {
+     color: yellow;
+ }
+
+ #idMood img{
+    width: 20%;
+ }
+
+ .clsComment {
+     text-align: left;
+ }
