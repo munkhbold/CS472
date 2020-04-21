@@ -19,3 +19,22 @@
  .clsComment {
      text-align: left;
  }
+
+ol#idMovieList {
+    margin-left: 40px;
+    transform: rotate(180deg);
+}
+ol#idMovieList > li {
+    transform: rotate(-180deg);
+}
+
+table tr td:first-child{
+    color: yellow;
+}
+
+a {
+    color: red;
+}
+a:visited {
+    color: blueviolet;
+}
