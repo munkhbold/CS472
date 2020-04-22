@@ -1,10 +1,10 @@
  body {
-     background-color: rgb(118, 126, 138);
+     background-color: rgb(120, 118, 101);
      color: white;
  }
 
  h1, h3 {
-     color: blue;
+     color: #3c568a;
      font-family: 'Courier New', Courier, monospace;
  }
 
@@ -33,7 +33,7 @@ table tr td:first-child{
 }
 
 a {
-    color: red;
+    color: rgb(107, 53, 53);
     text-decoration: none;
 }
 a:visited {
