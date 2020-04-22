@@ -1,4 +1,5 @@
 body {
+    background-image: url("recipeImages/silverware.jpg");
     background-color: white;
     color: #404040;
     font-size: 11pt;
@@ -38,4 +39,8 @@ a {
 
 abbr {
     text-decoration: underline;
+}
+
+ul {
+    list-style-image: url('recipeImages/pie_bullet.png');
 }
