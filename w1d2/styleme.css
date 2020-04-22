@@ -1,6 +1,6 @@
  body {
      background-color: rgb(120, 118, 101);
-     color: white;
+     color: rgba(235, 232, 232, 0.877);
  }
 h1{
     font-size: 28pt;
@@ -14,7 +14,7 @@ h3{
  }
 
  .mark {
-     color: yellow;
+     color: rgba(255, 255, 0, 0.767);
  }
 
  #idMood img{
@@ -34,7 +34,7 @@ ol#idMovieList > li {
 }
 
 table tr td:first-child{
-    color: yellow;
+    color: rgba(255, 255, 0, 0.767);
 }
 
 a {
