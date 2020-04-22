@@ -1,0 +1,26 @@
+h1, h2 {
+    color: #A4A400;
+    background-color:  #F0F0F0 ;
+}
+
+h1 {
+    text-align: center;
+}
+
+h2 {
+    text-transform: uppercase;
+}
+
+#idUserComment p {
+    margin: 10px 40px 10px 40px;
+    background-color: #FFFFA8;
+    font-style: italic;
+}
+
+#idCopyright{
+    text-align: right;
+}
+
+#idCopyright span{
+    display: block;
+}

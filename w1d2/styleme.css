@@ -34,6 +34,7 @@ table tr td:first-child{
 
 a {
     color: red;
+    text-decoration: none;
 }
 a:visited {
     color: blueviolet;
