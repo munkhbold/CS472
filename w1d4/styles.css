@@ -22,9 +22,11 @@ main #col1 {
 }
 main #col2 {
     background-color: rgba(156, 152, 152, 0.699);
+    height: 300px;
 }
 main #col3 {
     background-color: rgb(128, 128, 128);
+    height: 300px;
 }
 
 footer {
