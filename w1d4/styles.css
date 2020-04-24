@@ -14,10 +14,11 @@ header {
         flex-basis: 50%;
     }
     main #col2 {
-        flex-basis: 50%;
+        flex-basis: 100%;
+        order: 3;
     }
     main #col3 {
-        flex-basis: 100%;
+        flex-basis: 50%;
     }
 }
 .menu {
