@@ -1,0 +1,39 @@
+header {
+    background-color: lightblue;
+    height: 40px;
+    text-align: center;
+}
+.menu {
+    height: 40px;
+    background-color: rgb(2, 77, 2);
+    color: white;
+}
+.menu div{
+    border-right: 1px solid black;
+}
+
+main {
+    display: flex;
+    flex-wrap: wrap;
+}
+main #col1 {
+    background-color: rgba(128, 128, 128, 0.623);
+    height: 300px;
+}
+main #col2 {
+    background-color: rgba(156, 152, 152, 0.699);
+}
+main #col3 {
+    background-color: rgb(128, 128, 128);
+}
+
+footer {
+    background-color: rgb(2, 77, 2);
+    height: 40px;
+    text-align: center;
+    color: white;
+}
+
+.menu {
+    display: flex;
+}
