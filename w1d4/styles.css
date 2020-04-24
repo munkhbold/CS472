@@ -23,7 +23,7 @@ header {
 }
 .menu {
     height: 40px;
-    background-color: rgb(2, 77, 2);
+    background-color: #406156;
     color: white;
 }
 .menu div{
@@ -45,7 +45,7 @@ main #col3 {
 }
 
 footer {
-    background-color: rgb(2, 77, 2);
+    background-color: #406156;
     height: 100px;
     text-align: center;
     color: white;
