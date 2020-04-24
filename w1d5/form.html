@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Web form</title>
+        <meta name="description" content="Web Form">
+        <meta name="author" content="bootstrap">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+      </head>
+    <body>
+        <div class="container">
+            <form>
+                <div class="form-group">
+                    <label for="idWebsite">Website url</label>
+                    <input type="text" class="form-control"
+                        id="idWebsite"
+                        placeholder="http://"
+                        pattern="^((https?|http):\/\/)?(www.)?[a-z0-9]+\.[a-z]+(\/[a-zA-Z0-9#]+\/?)*$"
+                        title="Only allows website url starts with http:// or https://"
+                        required
+                        >
+                </div>
+                <div class="form-group">
+                    <label for="idEmail">Email address</label>
+                    <input type="email" class="form-control" id="idEmail" placeholder="Enter email">
+                    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                </div>
+                <div class="form-group">
+                    <label for="idPwd">Password</label>
+                    <input type="password" class="form-control" id="idPwd" placeholder="Password" minlength="10"
+                        pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{10,}$"
+                        title="Password field is at least 10 characters in length and contain at least one number and one uppercase and lowercase letter"
+                        required
+                        >
+                </div>
+                <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="idCheckme">
+                    <label class="form-check-label" for="idCheckme">Check me out</label>
+                </div>
+
+                
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+        </div>
+        
+    </body>
+</html>
