@@ -4,6 +4,22 @@ header {
     text-align: center;
     padding-top: 30px;
 }
+
+.box {
+    height: 300px;  
+    flex-basis: 33.33%;
+}
+@media(max-width:600px){
+    main #col1 {
+        flex-basis: 50%;
+    }
+    main #col2 {
+        flex-basis: 50%;
+    }
+    main #col3 {
+        flex-basis: 100%;
+    }
+}
 .menu {
     height: 40px;
     background-color: rgb(2, 77, 2);
@@ -19,15 +35,12 @@ main {
 }
 main #col1 {
     background-color: rgba(128, 128, 128, 0.623);
-    height: 300px;
 }
 main #col2 {
     background-color: rgba(156, 152, 152, 0.699);
-    height: 300px;
 }
 main #col3 {
     background-color: rgb(128, 128, 128);
-    height: 300px;
 }
 
 footer {
