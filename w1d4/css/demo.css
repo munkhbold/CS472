@@ -1,0 +1,47 @@
+body {
+    margin: 0;
+}
+header {
+    background-color: lightblue;
+    height: 100px;
+    text-align: center;
+    padding-top: 30px;
+}
+
+.box {
+    height: 300px;  
+}
+
+.menu {
+    height: 50px;
+    background-color: #406156;
+    color: white;
+    font-size: 20px;
+}
+
+.menu div{
+    margin-left: 15px;
+    padding: 10px;
+    border-right: 1px solid black;
+}
+
+#col1 {
+    background-color: rgba(128, 128, 128, 0.623);
+    height: 300px;  
+}
+#col2 {
+    background-color: rgba(156, 152, 152, 0.699);
+    height: 300px;  
+}
+#col3 {
+    background-color: rgb(128, 128, 128);
+    height: 300px;  
+}
+
+footer {
+    background-color: #406156;
+    height: 100px;
+    text-align: center;
+    color: white;
+    padding-top: 30px;
+}
