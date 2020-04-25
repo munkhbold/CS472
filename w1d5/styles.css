@@ -7,6 +7,15 @@
     text-align: right;
 }
 .navbar {
-    color: #ffffff !important;
     background-color: #30a4e7;
+}
+
+.navbar .nav-item:not(:last-child) {
+    color: #ffffff;
+    border-right: 1px solid #ffffff;
+    padding: 0 20px 0 20px;
+    font-size: 16px;
+}
+.nav-link {
+    color: #d6ecf8 !important;
 }
