@@ -6,6 +6,9 @@
 .btns {
     text-align: right;
 }
+.btns button:nth-child(2) {
+    margin: 0 30px 0 30px;
+}
 .navbar {
     background-color: #30a4e7;
 }
