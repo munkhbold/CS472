@@ -12,10 +12,16 @@
 .navbar {
     background-color: #30a4e7;
 }
+.navbar .first-item {
+    font-size: 22px;
+    color: white;
+    padding-top: 5px;
+    margin: 0 40px 0 10px;
+}
 
-.navbar .nav-item:not(:last-child) {
+.navbar .nav-item {
     color: #ffffff;
-    border-right: 1px solid #ffffff;
+    border-left: 1px solid #ffffff;
     padding: 0 20px 0 20px;
     font-size: 16px;
 }
