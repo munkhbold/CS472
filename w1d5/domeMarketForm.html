@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Dome Market Form</title>
+        <meta name="description" content="Web Form">
+        <meta name="author" content="bootstrap">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="styles.css" rel="stylesheet" />
+
+      </head>
+    <body>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item ">
+                    <a class="nav-link" href="#">MUM Golden Dome Market ::: SRM System</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Supplier</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+              </ul>
+              <span class="navbar-text" style="margin-right: 10px;">
+                Hello!
+              </span>
+             <input type="button" class="btn btn-light" value="Sign Out">
+        </nav>
+        <div class="page-title">New Product Form</div>
+        <div class="container">
+            <form>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="idProductNumber">Product Number</label>
+                            <input type="text" name="number" class="form-control" id="idProductNumber" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="idName">Name</label>
+                            <input type="name" name="name" class="form-control" id="idName">
+                        </div>
+                        <div class="form-group">
+                            <label for="idUnitPrice">Unit Price</label>
+                            <input type="number" name="price" class="form-control" id="idUnitPrice" step="0.0" value="0.0">
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <div class="form-group">
+                            <label for="idInStock">Quantity in stock</label>
+                            <input type="number" name="qty" class="form-control" id="idInStock" step="0" value="0">
+                        </div>
+                        <div class="form-group">
+                            <label for="idSupplier">Supplier:</label>
+                            <select id="idSupplier" name="supplier" class="form-control">
+                                <option>Select supplier</option>
+                                <option value="1">supplier 1</option>
+                                <option value="2">supplier 2</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="idDate">Date supplied</label>
+                            <input type="date" name="qty" class="form-control" id="idDate">
+                        </div>
+
+                        <div class="form-group btns">
+                            <button type="reset" class="btn btn-outline-dark">Reset</button>
+                            <button type="cancel" class="btn btn-outline-danger">Cancel</button>
+                            <button type="submit" class="btn btn-outline-info">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+        
+    </body>
+</html>

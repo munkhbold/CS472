@@ -1,0 +1,12 @@
+.page-title {
+    margin-left: 15%;
+    font-size: 25px;
+    padding: 10px;
+}
+.btns {
+    text-align: right;
+}
+.navbar {
+    color: #ffffff !important;
+    background-color: #30a4e7;
+}
