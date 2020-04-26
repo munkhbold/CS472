@@ -64,6 +64,11 @@ function filterEqualThree(digits){
   })
 }
 
+function productAllElements(elems){
+  return elems.reduce(function(accum, elem){
+    return accum * elem;
+  })
+}
 function myFunctionTest(expected, fn){
   let res = fn();
   let resType = typeof(res);
