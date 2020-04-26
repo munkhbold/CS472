@@ -1,9 +1,8 @@
-
-const max = function (param1, param2){
+function max(param1, param2){
     return param1 < param2 ? param2 : param1;
 }
 
-const maxOfThree = function(param1, param2, param3){
+function maxOfThree(param1, param2, param3){
   if ( param2 < param1 && param1 > param3){
     return param1;
   } else if (param1 < param2 && param2 > param3){
@@ -12,24 +11,24 @@ const maxOfThree = function(param1, param2, param3){
   return param3;
 }
 
-const isVowel = function(str){
+function isVowel(str){
   const vowels = ['a', 'e', 'i', 'o', 'u'];
   return vowels.indexOf(str) != -1 ? true : false;
 }
 
-const sum = function(intList){
+function sum(intList){
   return intList.reduce(function(accum, elem){
     return elem + accum
   })
 }
 
-const multiply = function(intList){
+function multiply(intList){
   return intList.reduce(function(accum, elem){
     return accum * elem;
   })
 }
 
-const reverse = function(str){
+function reverse(str){
   let rev = "";
   for(let i=str.length-1; i>=0; i--){
     rev += str[i];
@@ -37,7 +36,7 @@ const reverse = function(str){
   return rev;
 }
 
-const findLongestWord = function(words){
+function findLongestWord(words){
   let l = 0;
   for(let i=0; i<words.length; i++){
     if (l < words[i].length){
@@ -47,25 +46,25 @@ const findLongestWord = function(words){
   return l;
 }
 
-const filterLongWords = function(words, minLen){
+function filterLongWords(words, minLen){
   return words.filter(function(elem){
     return elem.length > minLen;
   })
 }
 
-const multiplyByTen = function(digits){
+function multiplyByTen(digits){
   return digits.map(function(elem){
     return elem * 10;
   })
 }
 
-const filterEqualThree = function(digits){
+function filterEqualThree(digits){
   return digits.filter(function(elem){
     return elem === 3;
   })
 }
 
-const myFunctionTest = function(expected, fn){
+function myFunctionTest(expected, fn){
   let res = fn();
   let resType = typeof(res);
 
