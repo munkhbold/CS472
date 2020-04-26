@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Javascript introduction</title>
+        <meta name="description" content="Js intro">
+        <meta name="author" content="js">
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <h1>Please look in Chrome developer console to see the output. CTRL_SHIFT_J</h1>
+        <script> 
+
+            console.log("2. Expected output of max(10, 22) is 22: -> "
+                + myFunctionTest(22, function(){return max(10, 22)}));
+
+            console.log("3. Expected output of maxOfThree(45, 44, 66) is 66 -> "
+                + myFunctionTest(66, function(){return maxOfThree(45, 44, 66)}));
+
+            console.log("4. Expected output of isVowel('a')) is true: "
+                + myFunctionTest(true, function(){return isVowel("a")}));
+
+            console.log("5. Expected output of sum([2, 4, 6]) is 12 "
+                + myFunctionTest(12, function(){return sum([2, 4, 6])}));
+            console.log("                 and multiply([2, 4, 6]) is 48: "
+                + myFunctionTest(12, function(){return multiply([2, 4, 6])}));
+
+            console.log("6. Expected output of reverse('Hello') is olleH: "
+                + myFunctionTest("olleH", function(){return reverse("Hello")}));
+
+            console.log("7. Expected output of findLongestWord(['has4', 'longest8', 'middle7']) is 8 " 
+                + myFunctionTest(8, function(){return findLongestWord(["has4", "longest8", "middle7"])}));
+
+            console.log("7. Expected output of findLongestWord(['has4', 'longest8', 'middle7']) is a: "
+                + myFunctionTest('a', function(){return findLongestWord(["has4", "longest8", "middle7"])}));
+
+            console.log("8. Expected output of filterLongWords: "
+                + myFunctionTest(['longest8', 'middle7'], function(){return filterLongWords(["has4", "longest8", "middle7"], 5)}));
+
+            console.log("9. Test map/filter/reduce: ");
+            console.log("   a) multiply each element by 10: [3,4,5,6] -> "
+                + myFunctionTest([30,40,50,60], function(){ return multiplyByTen([3,4,5,6])}));
+            console.log("   b) return array with all elements equal to 3: [3,4,5,6,3] -> "
+                + myFunctionTest([3,3], function(){ return filterEqualThree([3,4,5,6,3])}));
+            
+        </script>
+    </body>
+</html>
