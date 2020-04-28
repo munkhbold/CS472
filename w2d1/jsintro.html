@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name=viewport content="width=device-width, initial-scale=1">
+        <title>Javascript introduction</title>
+        <meta name="description" content="Js intro">
+        <meta name="author" content="js">
+        <script src="lib/scripts.js"></script>
+    </head>
+    <body>
+        <h1>Please look in Chrome developer console to see the output. CTRL_SHIFT_J</h1>
+        <script> 
+
+            console.log("5. Expected output of sum([2, 4, 6]) is 12 "
+                + myFunctionTest(12, function(){return sum([2, 4, 6])}));
+            console.log("                 and multiply([2, 4, 6]) is 48: "
+                + myFunctionTest(12, function(){return multiply([2, 4, 6])}));
+
+            console.log("6. Expected output of reverse('Hello') is olleH: "
+                + myFunctionTest("olleH", function(){return reverse("Hello")}));
+
+            console.log("7. Expected output of findLongestWord(['has4', 'longest8', 'middle7']) is 8 " 
+                + myFunctionTest(8, function(){return findLongestWord(["has4", "longest8", "middle7"])}));
+
+                console.log("8. Expected output of filterLongWords: "
+                + myFunctionTest(['longest8', 'middle7'], function(){return filterLongWords(["has4", "longest8", "middle7"], 5)}));
+            
+        </script>
+    </body>
+</html>
