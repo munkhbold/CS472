@@ -4,8 +4,14 @@ window.onload = function(){
 
   const chkBling = document.getElementById("idBling");
   chkBling.onchange = changeFontStyle;
+
+  const btnMalk = document.getElementById("idMalkovitch");
+  btnMalk.onclick = clickMalkovitch;
 }
 
+/**
+ * Increases text area font by 2pt
+ */
 function changeFontSize(){
   let textarea = document.getElementById("idText");
   setInterval(()=>{
@@ -14,7 +20,9 @@ function changeFontSize(){
   }, 500);
 }
 
-
+/**
+ * Change text area style by adding bling class
+ */
 function changeFontStyle(e){
   let textarea = document.getElementById("idText"); 
   
@@ -25,4 +33,14 @@ function changeFontStyle(e){
     textarea.className = "";
     document.body.className = "";
   }
+}
+
+/**
+ *  "Malkovitch" button that causes words of >= 5 characters in length to be replaced with the word "Malkovich".
+ */
+function clickMalkovitch(){
+  let textarea = document.getElementById("idText"); 
+  const btnMalk = document.getElementById("idMalkovitch");
+  let content = textarea.value;
+  textarea.value = content.split(" ").reduce((a, b)=> a + " " + (b.length >= 5 ? "Malkovitch" : b), "");
 }
