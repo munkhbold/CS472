@@ -1,3 +1,4 @@
+/*jshint esversion: 6 */
 window.onload = function(){
   const btnBig = document.getElementById("idBigger");
   btnBig.onclick = changeFontSize;
