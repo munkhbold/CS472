@@ -8,6 +8,9 @@ window.onload = function(){
 
   const btnMalk = document.getElementById("idMalkovitch");
   btnMalk.onclick = clickMalkovitch;
+
+  const btnIgpay = document.getElementById("idIgpay");
+  btnIgpay.onclick = clickIgpay;
 }
 
 /**
@@ -45,4 +48,34 @@ function clickMalkovitch(){
   const btnMalk = document.getElementById("idMalkovitch");
   let content = textarea.value;
   textarea.value = content.split(" ").reduce((a, b)=> a + " " + (b.length >= 5 ? "Malkovitch" : b), "");
+}
+
+/**
+ * Handle event when Igpay button clicks
+ */
+function clickIgpay(){
+  let textarea = document.getElementById("idText"); 
+  let content = textarea.value.split(" ").map(convertToPigLatin).join(" ");
+  textarea.value = content;
+}
+
+/**
+ * Converts the text to Pig Latin.
+ */
+function convertToPigLatin(word){
+  if(word.trim() === "") return;
+
+  const vowels = ['a', 'e', 'i', 'y', 'o',]
+  if (vowels.indexOf(word[0].toLowerCase()) !== -1){
+    return word + "yay";
+  } else {
+    let pigLatin = "";
+    for(let i=0; i<word.length; i++){
+      if (vowels.indexOf(word[i]) !== -1) {
+        return word.substring(i, word.length-1) + pigLatin;
+      }
+      pigLatin += word[i];
+    }
+  }
+
 }
