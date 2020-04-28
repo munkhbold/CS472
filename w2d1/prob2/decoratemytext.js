@@ -23,6 +23,7 @@ function changeFontSize(){
 
 /**
  * Change text area style by adding bling class
+ * @param {Event} e
  */
 function changeFontStyle(e){
   let textarea = document.getElementById("idText"); 
