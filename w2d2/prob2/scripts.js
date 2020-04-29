@@ -87,7 +87,6 @@
     context("when [2,3,4] entered", function() {
         beforeEach(function() {
             /*sinon.stub(window, "prompt");
-
             prompt.onCall(0).returns("2");
             prompt.onCall(1).returns("3"); */
 
