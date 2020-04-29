@@ -1,0 +1,49 @@
+body{
+    background-color: #CCCCFF;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+span{
+    float: left;
+    color: red;
+    font-size: 25px;
+}
+
+h1{
+    text-align: center;
+    font-size: 32pt;
+    margin: 0;
+}
+
+textarea{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+    height: 400px;
+    font-size: 12pt;
+    font-weight: bold;
+    font-family: monospace;
+}
+
+div{
+    text-align: center;
+}
+fieldset{
+    display: inline;
+    border-width: 5px;
+    border-color: black;
+}
+
+fieldset legend{
+    text-align: left;
+}
+
+footer{
+    text-align: right;
+}
+
+p{
+    margin:0px;
+}
