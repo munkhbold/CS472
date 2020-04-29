@@ -21,7 +21,7 @@ let filter = null;
     return newArr;
   };
 
-  describe('Pure', function() {
+  describe('Pure functions', function() {
     describe('#filter()', function() {
       it('should return odd numbers [1,3,5] when input is [1,2,3,4,5,6]', ()=>{
         assert.deepEqual(filter([1,2,3,4,5,6], (el, inx)=> el % 2 != 0), [1,3,5]);
@@ -29,8 +29,8 @@ let filter = null;
     });
 
     describe('#map()', function() {
-      it('should return odd numbers [10,20,30] when input is [1,2,3]', ()=>{
-        assert.deepEqual(filter([1,2,3], (el, inx)=> el * 10), [1,2,3]);
+      it('should return list multiplied by 10 when input is [1,2,3]', ()=>{
+        assert.deepEqual(map([1,2,3], (el, inx)=> el * 10), [10,20,30]);
       });
     });
   });
