@@ -49,7 +49,7 @@
         }, speed); 
     };
 
-    /** You'll choose one of exercise, juggler, bike, dive */
+    /** You'll choose one of them: exercise, juggler, bike, dive, custom */
     function selectAnimation(){
         var text = document.getElementById("mytext");
         text.value = ANIMATIONS[document.getElementById("animation").value].split("=====\n")[0];
