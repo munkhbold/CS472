@@ -21,9 +21,36 @@ const jsPractice = {};
     return arr;
   }
 
+  const deepComparison = (aVal, bVal) => {
+    if (aVal === null && bVal === null){
+      return true;
+    }
+
+    if(typeof(aVal) !== 'object' && typeof(bVal) !== 'object'){
+      if(aVal === bVal){
+        return true;
+      } else {
+        return false;
+      }
+      // return false if one of these value is not object and other one is object
+    } else if (typeof(aVal) === 'object' && typeof(bVal) !== 'object' ||
+                typeof(aVal) !== 'object' && typeof(bVal) === 'object'){
+      return false;
+    }
+
+    const keys = Object.keys(aVal);
+    for(let key in keys){
+      // and we do recursion comparision
+      if (!deepComparison(aVal[key], bVal[key])){
+        return false;
+      }
+    }
+    return true;
+  }
 
   jsPractice.reverseArray = reverseArray;
   jsPractice.reverseArrayInPlace = reverseArrayInPlace;
   jsPractice.arrToList = arrToList;
   jsPractice.listToArray = listToArray;
+  jsPractice.deepComparison = deepComparison;
 })();

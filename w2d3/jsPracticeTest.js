@@ -54,5 +54,18 @@
         assert.deepEqual(expected, jsPractice.listToArray(list));
       });
     });
+
+    describe('#deepComparison()', function() {
+      it('should return true when inputs are [1,2,3] and [1,2,3]', ()=>{
+        const aVal = [1,2,3];
+        const bVal = [1,2,3];
+        assert.deepEqual(true, jsPractice.deepComparison(aVal, bVal));
+      });
+      it('should return false [1,2,4,4] when input is [1,2,3]', ()=>{
+        const aVal = [1,2,4];
+        const bVal = [1,2,3];
+        assert.deepEqual(false, jsPractice.deepComparison(aVal, bVal));
+      });
+    });
   });
 })();
