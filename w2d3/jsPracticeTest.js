@@ -56,15 +56,12 @@
     });
 
     describe('#deepComparison()', function() {
-      it('should return true when inputs are [1,2,3] and [1,2,3]', ()=>{
-        const aVal = [1,2,3];
-        const bVal = [1,2,3];
-        assert.deepEqual(true, jsPractice.deepComparison(aVal, bVal));
+      const aVal = {here: {is: "an"}, object: 2};
+      it('should return true when inputs are {here: {is: "an"}, object: 2} and {here: {is: "an"}, object: 2}', ()=>{
+        assert.deepEqual(true, jsPractice.deepComparison(aVal, {here: {is: "an"}, object: 2}));
       });
-      it('should return false [1,2,4,4] when input is [1,2,3]', ()=>{
-        const aVal = [1,2,4];
-        const bVal = [1,2,3];
-        assert.deepEqual(false, jsPractice.deepComparison(aVal, bVal));
+      it('should return false {here: {is: "an"}, object: 2} when input is {here: 1, object: 2}', ()=>{
+        assert.deepEqual(false, jsPractice.deepComparison(aVal, {here: 1, object: 2}));
       });
     });
   });

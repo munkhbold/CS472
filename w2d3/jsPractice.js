@@ -36,10 +36,16 @@ const jsPractice = {};
     } else if (typeof(aVal) === 'object' && typeof(bVal) !== 'object' ||
                 typeof(aVal) !== 'object' && typeof(bVal) === 'object'){
       return false;
-    }
+    } 
 
     const keys = Object.keys(aVal);
-    for(let key in keys){
+    const keys2 = Object.keys(bVal);
+
+    if(keys.length !== keys2.length){
+      return false;
+    }
+    for(let key of keys){
+      console.log(key);
       // and we do recursion comparision
       if (!deepComparison(aVal[key], bVal[key])){
         return false;
