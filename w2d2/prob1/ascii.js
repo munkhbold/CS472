@@ -52,7 +52,7 @@
     /** You'll choose one of them: exercise, juggler, bike, dive, custom */
     function selectAnimation(){
         var text = document.getElementById("mytext");
-        text.value = ANIMATIONS[document.getElementById("animation").value].split("=====\n")[0];
+        text.value = ANIMATIONS[this.value].split("=====\n")[0];
         x = 0;
     };
 
