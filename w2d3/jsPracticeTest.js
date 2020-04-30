@@ -60,7 +60,7 @@
       it('should return true when inputs are {here: {is: "an"}, object: 2} and {here: {is: "an"}, object: 2}', ()=>{
         assert.deepEqual(true, jsPractice.deepComparison(aVal, {here: {is: "an"}, object: 2}));
       });
-      it('should return false {here: {is: "an"}, object: 2} when input is {here: 1, object: 2}', ()=>{
+      it('should return false  when inputs are {here: {is: "an"}, object: 2} and {here: 1, object: 2}', ()=>{
         assert.deepEqual(false, jsPractice.deepComparison(aVal, {here: 1, object: 2}));
       });
     });
