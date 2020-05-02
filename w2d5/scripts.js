@@ -1,5 +1,6 @@
 let Teacher = null;
 {
+  "use strict";
   /**
    * Add filter in String constructor
    * @param {String} str 
