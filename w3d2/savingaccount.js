@@ -14,6 +14,7 @@ class SavingAccount extends Account {
   constructor(number, interest){
     super(number)
     this.interest = interest;
+    this.interestCnt = 0;
   }
 
   /**
@@ -35,7 +36,7 @@ class SavingAccount extends Account {
    * deposits the interest amount into the account.
    */
   addInterest(){
-    console.log()
+    this.interestCnt ++;
     this.interest = this._balance * this._interest / 100 ;
   }
 
@@ -44,5 +45,13 @@ class SavingAccount extends Account {
    */
   toString() {
     return "Saving account " + this._number + ": balance " + this._balance + " Interest: " + this._interest;
+  }
+
+  /**
+   *  @returns {String} return a string specifying how much interest was added
+   */
+  endOfMonth(){
+    this.addInterest();
+    return `Interest added SavingsAccount 2: balance: ${this._balance} interest: ${this.interest}`;
   }
 }

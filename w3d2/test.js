@@ -113,22 +113,43 @@
         bank = new Bank();
       });
       it('addAccount', ()=>{
-        const numberOfAccounts = bank.addAccount();
-        assert.equal(bank.accounts.length, numberOfAccounts);
+        const accountNumber = bank.addAccount();
+        console.log(bank.accounts)
+        assert.equal(bank.accounts[0].getNumber(), accountNumber);
       });
       it('addSavingsAccount', ()=>{
-        const numberOfAccounts = bank.addSavingsAccount(25);
-        assert.equal(bank.accounts.length, numberOfAccounts);
+        const accountNumber = bank.addSavingsAccount(25);
+        assert.equal(bank.accounts[0].getNumber(), accountNumber);
       });
       it('addCheckingAccount', ()=>{
-        const numberOfAccounts = bank.addCheckingAccount(50);
-        assert.equal(bank.accounts.length, numberOfAccounts);
+        const accountNumber = bank.addCheckingAccount(50);
+        assert.equal(bank.accounts[0].getNumber(), accountNumber);
       });
 
       it('accountReport', ()=>{
         bank.addAccount();
         bank.addSavingsAccount(25);
         bank.addCheckingAccount(50);
+        let expected = "";
+        for(let account in bank.accounts){
+          expected += account.toString() + '\n';
+        }
+        assert.equal(expected, bank.accountReport());
+      });
+      it('endOfMonth', ()=>{
+        
+        bank.addAccount();
+        assert.equal("", bank.accounts[0].endOfMonth());
+        bank.addSavingsAccount(25);
+        
+        let account = bank.accounts[1];
+        account.deposit(100);
+        assert.equal(`Interest added SavingsAccount 2: balance: ${account._balance} interest: ${account.interest}`, account.endOfMonth());
+        bank.addCheckingAccount(50);
+        
+        account = bank.accounts[2];
+        account.withdraw(10);
+        assert.equal(`Warning, low balance CheckingAccount 3: balance: ${account._balance} overdraft limit: ${account._overdraft}`, account.endOfMonth());
         let expected = "";
         for(let account in bank.accounts){
           expected += account.toString() + '\n';

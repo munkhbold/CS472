@@ -8,9 +8,10 @@ class Bank{
    * @returns {Number} number of accounts
    */
   addAccount(){
-    this.accounts.push(new Account(this.nextNumber));
+    const newAccount = new Account(this.nextNumber)
+    this.accounts.push(newAccount);
     this.nextNumber++;
-    return this.accounts.length;
+    return newAccount.getNumber();
   }
 
   /**
@@ -19,9 +20,10 @@ class Bank{
    * @returns {Number} number of accounts
    */
   addSavingsAccount(interest){
-    this.accounts.push(new SavingAccount(this.nextNumber, interest));
+    const newAccount = new SavingAccount(this.nextNumber, interest)
+    this.accounts.push(newAccount);
     this.nextNumber++;
-    return this.accounts.length;
+    return newAccount.getNumber();
   }
 
   /**
@@ -30,9 +32,10 @@ class Bank{
    * @returns {Number} number of accounts
    */
   addCheckingAccount(overdraft){
-    this.accounts.push(new CheckingAccount(this.nextNumber, overdraft));
+    const newAccount = new CheckingAccount(this.nextNumber, overdraft)
+    this.accounts.push(newAccount);
     this.nextNumber++;
-    return this.accounts.length;
+    return newAccount.getNumber();
   }
 
   /**
@@ -53,6 +56,17 @@ class Bank{
     let out = "";
     for(let account in this.accounts){
       out += account.toString() + "\n";
+    }
+    return out;
+  }
+
+  /**
+   *  each of the accounts endOfMonth collecting their output
+   */
+  endOfMonth(){
+    let out = "";
+    for(let account in this.accounts){
+      out += account.endOfMonth() + '\n';
     }
     return out;
   }
