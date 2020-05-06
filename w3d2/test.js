@@ -42,6 +42,9 @@
         account.deposit(100);
         assert.equal(`Account ${number}: balance 100`, account.toString());
       });
+      it('endOfMonth', ()=>{
+        assert.equal("", account.endOfMonth());
+      });
     });
 
     describe('#SavingAccount class', function() {
@@ -71,7 +74,11 @@
           + " Interest: " + account.interest,
           account.toString());
       });
-
+      it('endOfMonth', ()=>{
+        ist = account.getBalance() * account.interest / 100
+        assert.equal(`Interest added SavingsAccount 2: balance: ${account._balance} interest: ${ist}`, account.endOfMonth());
+      });
+      
     });
 
     describe('#CheckingAccount class', function() {
@@ -103,6 +110,10 @@
           + ": balance " + account.getBalance()
           +", overdraft " + account.overdraft,
           account.toString());
+      });
+      it('endOfMonth', ()=>{
+        account.withdraw(1520);
+        assert.equal(`Warning, low balance CheckingAccount 3: balance: ${account._balance} overdraft limit: ${account._overdraft}`, account.endOfMonth());
       });
 
     });
@@ -144,12 +155,10 @@
         
         let account = bank.accounts[1];
         account.deposit(100);
-        assert.equal(`Interest added SavingsAccount 2: balance: ${account._balance} interest: ${account.interest}`, account.endOfMonth());
+
         bank.addCheckingAccount(50);
-        
         account = bank.accounts[2];
         account.withdraw(10);
-        assert.equal(`Warning, low balance CheckingAccount 3: balance: ${account._balance} overdraft limit: ${account._overdraft}`, account.endOfMonth());
         let expected = "";
         for(let account in bank.accounts){
           expected += account.toString() + '\n';
