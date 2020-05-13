@@ -1,0 +1,8 @@
+.dataContainer {
+    display: grid;
+    grid-template-columns: 30% 40% 30%;
+}
+ul li {
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}

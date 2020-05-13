@@ -1,0 +1,36 @@
+body {
+	font: 16pt "Lucida Grande", Arial, sans-serif;
+	text-align: center;
+}
+
+button {
+	font-size: 16pt;
+}
+
+#container {
+	position: relative;
+	height: 400px;
+	margin: 2em;
+}
+
+#loading {
+	position: absolute;
+	margin: -.5em 0 0;
+	height: 1em;
+	line-height: 1em;
+	z-index: 10;
+	top: 50%;
+	left: 0;
+	right: 0;
+	text-align: center;
+}
+
+#loading img {
+	vertical-align: bottom;
+	margin-right: .5em;
+	height: auto;
+}
+
+#boot img {
+	max-height: 400px;
+}
